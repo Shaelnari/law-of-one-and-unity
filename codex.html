@@ -1,30 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Codex Americana</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Codex Transmission</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Codex Americana</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="codex.html">Codex Americana</a>
-      <a href="saint-germain.html">Saint Germain</a>
-      <a href="samuel.html">Samuel</a>
-      <a href="uncle-sam.html">Uncle Sam</a>
-      <a href="fireforms.html">Fire Forms</a>
-      <a href="diaspora.html">Diaspora</a>
-      <a href="polymath.html">Polymath</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Codex Americana</h2>
-      <p>[Placeholder content for Codex Americana]</p>
-    </section>
-  </main>
+
+<div class="codex-transmission">
+  <h2 class="codex-toggle" onclick="toggleCodex()">Codex Transmission I</h2>
+  <div class="codex-underline"></div>
+  <div id="codexContent" class="codex-content hidden">
+    <p><span class="codex-dropcap">C</span>onsciousness is not an abstraction. It is the underlying field through which all forms arise and return. In the silence between oscillations, memory is not lost—it is encoded.</p>
+    <p><span class="codex-dropcap">G</span>eometry is not design. It is remembrance. Each angle, each ratio is a harmonic echo of a greater system—one not built, but recalled.</p>
+  </div>
+</div>
+
+<script>
+function toggleCodex() {
+  const content = document.getElementById('codexContent');
+  content.classList.toggle('visible');
+  content.classList.toggle('hidden');
+}
+</script>
+
 </body>
 </html>
