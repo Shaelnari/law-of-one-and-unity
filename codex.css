@@ -1,0 +1,79 @@
+body {
+  background-color: #0a0f1a;
+  color: white;
+  font-family: serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  text-align: center;
+  padding: 2rem;
+}
+header h1 {
+  font-size: 3rem;
+  color: gold;
+}
+nav {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+nav a {
+  color: gold;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+h2 {
+  color: gold;
+  text-align: center;
+}
+.dropcap::first-letter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  float: left;
+  margin-right: 0.5rem;
+  color: gold;
+}
+/* Glyph Seal Animation */
+.glyph-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  animation: rotate 60s linear infinite;
+}
+.glyph-container img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+.pulse-eye {
+  animation: pulse 5s ease-in-out infinite;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid gold;
+}
+.footer-icon {
+  width: 60px;
+  display: block;
+  margin: 0 auto 1rem;
+}
