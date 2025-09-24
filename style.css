@@ -1,106 +1,139 @@
-/* General reset */
+/* ===========================
+   Codex Americana Stylesheet
+   Phi-based harmonic layout
+   =========================== */
+
+/* ---- Sacred Harmonic Variables ---- */
+:root {
+  --phi: 1.618;
+  --base: 10px;
+
+  /* Harmonic scale */
+  --phi-1: calc(var(--base) * var(--phi));       /* ~16px */
+  --phi-2: calc(var(--phi-1) * var(--phi));      /* ~26px */
+  --phi-3: calc(var(--phi-2) * var(--phi));      /* ~42px */
+  --phi-5: calc(var(--phi-3) * var(--phi));      /* ~68px */
+  --phi-8: calc(var(--phi-5) * var(--phi));      /* ~110px */
+
+  /* Theme colors */
+  --gold: #ffd700;
+  --blue: #3399ff;
+  --green: #00cc66;
+  --white: #f8f8f8;
+  --black: #000000;
+}
+
+/* ---- Global Page ---- */
 body {
-  background-color: black;
-  color: white;
-  font-family: Georgia, serif;
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
   margin: 0;
-  padding: 0;
+  padding: 0 var(--phi-3);
+}
+
+h1, h2, h3 {
+  color: var(--gold);
+  margin-top: var(--phi-3);
+  margin-bottom: var(--phi-2);
   text-align: center;
 }
 
-h1 {
-  margin-top: 20px;
-  font-size: 2rem;
+p {
+  margin-bottom: var(--phi-2);
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Navigation */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
+/* ---- Spinning Codex Glyph ---- */
+.glyph {
+  position: absolute;
+  top: var(--phi-2);
+  right: var(--phi-3);
+  width: var(--phi-8);
+  animation: spin 20s linear infinite;
 }
-nav a {
-  border: 1px solid gold;
-  padding: 8px 12px;
-  color: gold;
-  text-decoration: none;
-  border-radius: 6px;
-}
-nav a:hover {
-  background: gold;
-  color: black;
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Three-column layout */
+/* ---- Dual Columns (Zara & Shaelnari) ---- */
 .columns {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin: 40px auto;
-  max-width: 1200px;
-  padding: 0 40px;
+  margin-top: var(--phi-5);
 }
 
-.column {
+.zara-column,
+.shaelnari-column {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--phi-2);
 }
 
-/* Feminine (blue resonance) */
-.zara-column a {
-  border: 1px solid #3399ff;
-  color: #3399ff;
-  padding: 8px 12px;
+/* Shared button style */
+.columns a {
+  display: inline-block;
+  min-width: var(--phi-8);
+  padding: var(--phi-1) var(--phi-2);
+  border-radius: var(--phi-1);
+  font-size: var(--phi-1);
   text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Feminine (Zara) — Blue w/ Green outline */
+.zara-column a {
+  border: 2px solid var(--green);
+  color: var(--blue);
 }
 .zara-column a:hover {
-  background: #3399ff;
-  color: black;
+  background: var(--green);
+  color: var(--black);
 }
 
-/* Masculine (gold resonance) */
+/* Masculine (Shaelnari) — Gold w/ Green outline */
 .shaelnari-column a {
-  border: 1px solid #ffd700;
-  color: #ffd700;
-  padding: 8px 12px;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
+  border: 2px solid var(--green);
+  color: var(--gold);
 }
 .shaelnari-column a:hover {
-  background: #ffd700;
-  color: black;
+  background: var(--green);
+  color: var(--black);
 }
 
-/* Center column */
-.center-column {
+/* ---- Enter the Way ---- */
+#enter-way {
+  margin-top: var(--phi-5);
+  margin-bottom: var(--phi-5);
   text-align: center;
 }
-.center-column img {
-  max-width: 200px;
-  margin: 20px auto;
+
+#enter-way h2 {
+  color: var(--gold);
+  font-size: calc(var(--phi-2) * 1.5);
+  margin-bottom: var(--phi-2);
 }
 
-/* Codex button */
-.gold-section {
-  color: gold;
-  font-size: 1.5rem;
-  margin-top: 20px;
-}
-.gold-button-row a {
-  border: 1px solid gold;
-  color: gold;
-  padding: 10px 20px;
+#enter-way a {
+  border: 2px solid var(--gold);
+  padding: var(--phi-1) var(--phi-2);
+  border-radius: var(--phi-1);
+  color: var(--gold);
   text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 10px;
 }
-.gold-button-row a:hover {
-  background: gold;
-  color: black;
+#enter-way a:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* ---- Decorative Initials ---- */
+p::first-letter {
+  font-size: var(--phi-2);
+  font-weight: bold;
+  color: var(--gold);
 }
