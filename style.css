@@ -1,139 +1,63 @@
-/* ===========================
-   Codex Americana Stylesheet
-   Phi-based harmonic layout
-   =========================== */
+/* ======================
+   Fixes for Layout + Colors
+   ====================== */
 
-/* ---- Sacred Harmonic Variables ---- */
-:root {
-  --phi: 1.618;
-  --base: 10px;
-
-  /* Harmonic scale */
-  --phi-1: calc(var(--base) * var(--phi));       /* ~16px */
-  --phi-2: calc(var(--phi-1) * var(--phi));      /* ~26px */
-  --phi-3: calc(var(--phi-2) * var(--phi));      /* ~42px */
-  --phi-5: calc(var(--phi-3) * var(--phi));      /* ~68px */
-  --phi-8: calc(var(--phi-5) * var(--phi));      /* ~110px */
-
-  /* Theme colors */
-  --gold: #ffd700;
-  --blue: #3399ff;
-  --green: #00cc66;
-  --white: #f8f8f8;
-  --black: #000000;
+/* Main Title */
+header h1, 
+h1.site-title {
+  color: #ffffff; /* White for Academy title */
+  text-align: center;
+  font-size: var(--phi-3);
+  margin-top: var(--phi-2);
 }
 
-/* ---- Global Page ---- */
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: 'Georgia', serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0 var(--phi-3);
+/* Navigation Bar */
+nav {
+  text-align: center;
+  margin-top: var(--phi-1);
+  margin-bottom: var(--phi-3);
 }
 
-h1, h2, h3 {
+nav a {
   color: var(--gold);
-  margin-top: var(--phi-3);
-  margin-bottom: var(--phi-2);
-  text-align: center;
-}
-
-p {
-  margin-bottom: var(--phi-2);
-  max-width: 65ch;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ---- Spinning Codex Glyph ---- */
-.glyph {
-  position: absolute;
-  top: var(--phi-2);
-  right: var(--phi-3);
-  width: var(--phi-8);
-  animation: spin 20s linear infinite;
-}
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* ---- Dual Columns (Zara & Shaelnari) ---- */
-.columns {
-  display: flex;
-  justify-content: space-between;
-  margin-top: var(--phi-5);
-}
-
-.zara-column,
-.shaelnari-column {
-  display: flex;
-  flex-direction: column;
-  gap: var(--phi-2);
-}
-
-/* Shared button style */
-.columns a {
-  display: inline-block;
-  min-width: var(--phi-8);
-  padding: var(--phi-1) var(--phi-2);
-  border-radius: var(--phi-1);
-  font-size: var(--phi-1);
-  text-align: center;
   font-weight: bold;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 0 var(--phi-1);
+  font-size: var(--phi-1);
 }
 
-/* Feminine (Zara) — Blue w/ Green outline */
-.zara-column a {
-  border: 2px solid var(--green);
+nav a:hover {
   color: var(--blue);
 }
-.zara-column a:hover {
-  background: var(--green);
-  color: var(--black);
-}
 
-/* Masculine (Shaelnari) — Gold w/ Green outline */
-.shaelnari-column a {
-  border: 2px solid var(--green);
-  color: var(--gold);
-}
-.shaelnari-column a:hover {
-  background: var(--green);
-  color: var(--black);
-}
-
-/* ---- Enter the Way ---- */
-#enter-way {
-  margin-top: var(--phi-5);
-  margin-bottom: var(--phi-5);
-  text-align: center;
-}
-
+/* "Enter the Way" Section */
 #enter-way h2 {
   color: var(--gold);
   font-size: calc(var(--phi-2) * 1.5);
   margin-bottom: var(--phi-2);
+  text-align: center;
 }
 
 #enter-way a {
+  display: inline-block;
   border: 2px solid var(--gold);
   padding: var(--phi-1) var(--phi-2);
   border-radius: var(--phi-1);
   color: var(--gold);
+  background: transparent;
   text-decoration: none;
 }
+
 #enter-way a:hover {
   background: var(--gold);
   color: var(--black);
 }
 
-/* ---- Decorative Initials ---- */
-p::first-letter {
-  font-size: var(--phi-2);
-  font-weight: bold;
-  color: var(--gold);
+/* Fix footer Codex Americana link color */
+footer a {
+  color: var(--gold) !important;
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--blue) !important;
 }
