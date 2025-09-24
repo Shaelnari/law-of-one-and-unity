@@ -1,63 +1,71 @@
-/* ======================
-   Fixes for Layout + Colors
-   ====================== */
-
-/* Main Title */
-header h1, 
-h1.site-title {
-  color: #ffffff; /* White for Academy title */
+/* General styles */
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Georgia, serif;
   text-align: center;
-  font-size: var(--phi-3);
-  margin-top: var(--phi-2);
 }
 
-/* Navigation Bar */
-nav {
-  text-align: center;
-  margin-top: var(--phi-1);
-  margin-bottom: var(--phi-3);
+/* Title */
+header h1 {
+  color: #FFD700;
+  font-size: 2.2em;
+  margin: 20px 0;
 }
 
-nav a {
-  color: var(--gold);
+/* Layout using flexbox */
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 90vw;
+}
+
+/* Columns (Zara + Shaelnari) */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.column a {
+  display: block;
+  padding: 8px 14px;
+  border: 2px solid #00FF7F;
+  border-radius: 8px;
+  color: #87CEEB;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a:hover {
+  background-color: #FFD700;
+  color: black;
+}
+
+/* Center column */
+.center img {
+  max-width: 220px; /* golden ratio scale */
+  height: auto;
+  margin: 0 auto 20px auto;
+}
+
+.center .enter {
+  margin: 10px 0;
+  font-style: italic;
+}
+
+.codex {
+  display: inline-block;
+  margin-top: 10px;
+  color: #FFD700;
   font-weight: bold;
   text-decoration: none;
-  margin: 0 var(--phi-1);
-  font-size: var(--phi-1);
 }
 
-nav a:hover {
-  color: var(--blue);
-}
-
-/* "Enter the Way" Section */
-#enter-way h2 {
-  color: var(--gold);
-  font-size: calc(var(--phi-2) * 1.5);
-  margin-bottom: var(--phi-2);
-  text-align: center;
-}
-
-#enter-way a {
-  display: inline-block;
-  border: 2px solid var(--gold);
-  padding: var(--phi-1) var(--phi-2);
-  border-radius: var(--phi-1);
-  color: var(--gold);
-  background: transparent;
-  text-decoration: none;
-}
-
-#enter-way a:hover {
-  background: var(--gold);
-  color: var(--black);
-}
-
-/* Fix footer Codex Americana link color */
-footer a {
-  color: var(--gold) !important;
-  text-decoration: none;
-}
-footer a:hover {
-  color: var(--blue) !important;
+.codex:hover {
+  text-decoration: underline;
 }
