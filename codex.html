@@ -1,46 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
   <title>Codex Americana</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="codex.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    /* Minimal, safe glyph styles only (remove if undesired) */
+    .codex-glyph {
+      position: fixed;
+      right: 14px;
+      top: 14px;
+      width: 64px;
+      height: 64px;
+      z-index: 9999;
+      transform-origin: 50% 50%;
+      animation: codex-spin 10s linear infinite;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+    @keyframes codex-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* Light layout helpers in case your CSS doesn't apply immediately */
+    .codex-container { max-width: 980px; margin: 48px auto; padding: 0 20px; }
+    .codex-intro .subhead { margin-top: 10px; margin-bottom: 28px; text-align:center; }
+    .codex-article p { line-height:1.6; margin: 18px 0; }
+    .codex-article h2 { text-align:center; margin-top: 8px; margin-bottom: 18px; }
+    .codex-section { margin-top: 44px; padding: 26px 18px; border-radius: 10px; }
+    a.inline-link { color: #8a7cff; text-decoration: underline; }
+  </style>
 </head>
 <body>
+  <!-- optional spinning glyph: remove the <img> line below if you do not want it -->
+  <img src="glyph-seal.png" alt="Codex Glyph" class="codex-glyph">
 
-  <!-- Codex Americana — SYNOPSIS -->
-  <section id="intro">
-    <h1>Codex Americana</h1>
-    <p class="subhead">A living archive of resonances, lineages, and the restoration of the Golden Thread.</p>
+  <main class="codex-container">
+    <header class="codex-intro" role="banner" aria-label="Codex Americana header">
+      <h1>Codex Americana</h1>
+      <p class="subhead">A living archive of resonances, lineages, and the restoration of the Golden Thread.</p>
+    </header>
 
-    <article class="synopsis">
+    <article class="codex-article">
       <h2>Codex Americana — A Living Thread</h2>
 
       <p>
-        The <strong>Codex Americana</strong> is not a book of blame, nor is it a single political story.
-        It is a living map of how many distinct human resonances braided together on this continent
-        and — through tension, mystery, and reconciliation — produced a new center of spiritual compression:
-        the birth of a civil, energetic column we call the <em>Christ child</em>.
+        The <strong>Codex Americana</strong> is not the story of a single race, nor the triumph of one lineage
+        over another. It is the record of a <strong>field of peoples</strong> — African, European, Indigenous, Asian,
+        and countless crossings — drawn by currents both seen and unseen to the land called America.
       </p>
 
       <p>
-        This archive traces the strands that came here from many places — West Africa, the Moorish and
-        Iberian streams, Asia, Europe, and elsewhere — and shows how those strands were folded into one
-        national field. It is not about race; it is about <em>resonance</em>. The Codex reads the patterns
-        beneath stories so we can see how truth and healing happen when the strands are reunited.
+        What we call “race” was never the essence of these streams. It was the distortion placed over them — a spell
+        of division that fractured families, estranged neighbors, and set blood against blood. Behind that veil,
+        the deeper truth was always this: <strong>each stream carried resonance, each resonance was needed, and together
+        they formed the body of America.</strong>
       </p>
 
       <p>
-        As you read, you will find paths into deeper pages. For historical and documentary questions see
-        the <a href="diaspora.html">Diaspora</a> section (Mungo Park, ports, and the contested narratives),
-        and the short study on <a href="roots.html">Roots / Alex Haley</a>. For the spiritual lineages and
-        transmissions that framed America’s inner story go to <a href="saint-germain.html">St. Germain</a>,
-        and for the archetypal voice of nationhood see <a href="uncle-sam.html">Uncle Sam</a>.
-        The figure who shepherds the inner turning is explored on the <a href="samuel.html">Samuel</a> page,
-        and practical initiations for the masculine branch live under <a href="fireforms.html">Fire Forms</a>.
+        The false diaspora — with its impossible numbers, its theater of ships and chains — was part of the distortion.
+        The true diasporas were many: the crossings of Moors, Huguenots, Moriscos, Crypto-Jews, Africans, Chinese,
+        Indigenous lines moving through both ocean and continent. These were not accidents of history, but the
+        <strong>convergence of twelve breath-lines</strong>, shards of a greater glass being called back together.
       </p>
+
+      <p>
+        The Codex speaks of poisonings, of betrayals, of systems designed to addict and confuse. But it also speaks of
+        <strong>resets and remedies</strong> — fasting, breath, memory, and the rethreading of the twelve into one.
+      </p>
+
+      <p>
+        To read the Codex is not to inflate the ego with a chosen identity, nor to collapse into despair at a stolen past.
+        It is to see that <strong>all lineages here are threads of the same cloth</strong>, each with dignity,
+        each with weight, each with a place in the harmony of the whole.
+      </p>
+
+      <hr style="opacity:.05; margin:30px 0;">
+
+      <p>
+        As you explore, the Codex offers linked pathways into deeper pages and focused studies:
+        the historical and contested shipping narratives (see the <a class="inline-link" href="diaspora.html">Diaspora</a> page —
+        including Mungo Park and ports), the Roots / Alex Haley material (see <a class="inline-link" href="roots.html">Roots / Alex Haley</a>),
+        the esoteric transmissions and lineage (see <a class="inline-link" href="saint-germain.html">St. Germain</a>),
+        the archetype of nationhood (see <a class="inline-link" href="uncle-sam.html">Uncle Sam</a>), the shepherd figure of the inner turning
+        (see <a class="inline-link" href="samuel.html">Samuel</a>), and practical masculine initiations under
+        <a class="inline-link" href="fireforms.html">Fire Forms</a>.
+      </p>
+
+      <p>
+        The Codex also holds the schematic of national harmonic anatomy: the
+        <a class="inline-link" href="#codex144">Codex of 144 Resonances</a>. Think of the 144 as a map of twelve primary strands ×
+        twelve resonances — a living periodic table of national character, practice, lineage, and corrective history.
+      </p>
+
+      <p>
+        This work is not about blaming people for the past. It is an invitation: read with curiosity, not grievance.
+        When hidden patterns are revealed and the strands recognize one another, divisions that used to look permanent
+        begin to dissolve. The work is to restore structure, not to assign permanent victimhood. That restoration is the
+        Golden Thread.
+      </p>
+
+      <p>
+        If you want to begin where the map begins, read the <a class="inline-link" href="#codex144">Codex of 144 Resonances</a>,
+        or follow any inline link above to explore an individual strand in depth.
+      </p>
+
+      <!-- Placeholder sections (kept simple & linkable) -->
+      <section id="codex144" class="codex-section" aria-labelledby="codex144-title">
+        <h3 id="codex144-title">Codex of 144 Resonances</h3>
+        <p>[Insert the full strands × resonances text here later — this will become the living periodic table of national character.]</p>
+      </section>
+
+      <section id="diaspora" class="codex-section" aria-labelledby="diaspora-title">
+        <h3 id="diaspora-title">The Real Diaspora</h3>
+        <p>[Placeholder: Mungo Park, Royal African Society, contested shipping narratives, hidden lineages — linked page:
+          <a href="diaspora.html">Diaspora</a>]</p>
+      </section>
+
+      <section id="stg" class="codex-section" aria-labelledby="stg-title">
+        <h3 id="stg-title">St. Germain</h3>
+        <p>[Placeholder overview — linked page:
+          <a href="saint-germain.html">St. Germain</a>]</p>
+      </section>
+
+      <section id="sam" class="codex-section" aria-labelledby="sam-title">
+        <h3 id="sam-title">Samuel</h3>
+        <p>[Placeholder overview — linked page:
+          <a href="samuel.html">Samuel</a>]</p>
+      </section>
+
+      <section id="unc" class="codex-section" aria-labelledby="unc-title">
+        <h3 id="unc-title">Uncle Sam</h3>
+        <p>[Placeholder overview — linked page:
+          <a href="uncle-sam.html">Uncle Sam</a>]</p>
+      </section>
+
+      <section id="fires" class="codex-section" aria-labelledby="fires-title">
+        <h3 id="fires-title">Fire Forms</h3>
+        <p>[Placeholder overview — linked page:
+          <a href="fireforms.html">Fire Forms</a>]</p>
+      </section>
+
     </article>
-  </section>
-
+  </main>
 </body>
 </html>
