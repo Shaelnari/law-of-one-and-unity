@@ -104,3 +104,13 @@ header h1 {
   max-width: 120px;
   filter: drop-shadow(0 0 10px #FFD700);
 }
+.way-symbol {
+  margin-top: 20px;
+}
+
+.way-symbol img {
+  width: 120px;   /* adjust size as you like */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
