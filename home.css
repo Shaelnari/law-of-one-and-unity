@@ -36,20 +36,18 @@ h1 {
 
 /* Layout */
 .layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 2rem;
+  margin: 2rem;
 }
 
 /* Shaelnari (Left Column) */
 .shaelnari {
-  position: absolute;
-  left: 1rem;
-  top: 200px; /* adjust vertical offset as needed */
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
@@ -60,8 +58,6 @@ h1 {
   color: #39f;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  width: 140px;
-  text-align: left;
 }
 
 .shaelnari button:hover {
@@ -71,11 +67,9 @@ h1 {
 
 /* Zara (Right Column) */
 .zara {
-  position: absolute;
-  right: 1rem;
-  top: 200px; /* match Shaelnari vertical offset */
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.5rem;
 }
 
@@ -86,8 +80,6 @@ h1 {
   color: #39f;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  width: 140px;
-  text-align: right;
 }
 
 .zara button:hover {
@@ -98,19 +90,14 @@ h1 {
 /* Center */
 .center {
   text-align: center;
-  margin: 0 auto;
-  max-width: 400px;
 }
 
 /* Glow Image */
 .glow img {
-  width: 180px;      /* smaller size */
-  height: auto;
+  max-width: 200px;
   margin: 1rem auto;
   display: block;
-  filter: drop-shadow(0 0 25px gold);
-  border-radius: 50%; /* masks square edges */
-  background: transparent;
+  /* filter removed to fix glowing square issue */
 }
 
 /* Codex */
