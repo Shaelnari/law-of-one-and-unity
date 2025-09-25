@@ -36,107 +36,11 @@ header h1 {
   margin: 0.5rem 0 1rem 0;
 }
 
-/* === Generic Blue Button Row (if needed) === */
-.button-row {
-  margin: 1rem 0;
-}
-
-.button-row a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #39f;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #39f;
-  font-size: 1.1rem;
-}
-
-.button-row a:hover {
-  background: #39f;
-  color: black;
-}
-
 /* === Glow Image === */
 .glow img {
   max-width: 200px;
   margin: 1.5rem auto;
   display: block;
-}
-
-/* === Gold Section Titles === */
-.gold-section {
-  color: gold;
-  font-size: 1.8rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* === Gold Button Row (Codex) === */
-.gold-button-row {
-  margin: 0.5rem 0 2rem 0;
-}
-
-.gold-button-row a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid gold;
-  border-radius: 6px;
-  text-decoration: none;
-  color: gold;
-  font-size: 1.2rem;
-}
-
-.gold-button-row a:hover {
-  background: gold;
-  color: black;
-}
-
-/* === Zara Buttons: Feminine (Right Aligned) === */
-.zara-buttons {
-  display: flex;
-  justify-content: flex-end; /* push to right edge */
-  margin: 1rem 0;
-}
-
-.zara-buttons button {
-  margin: 0.3rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #39f;
-  border-radius: 6px;
-  background: black;
-  color: #39f;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.zara-buttons button:hover {
-  background: #39f;
-  color: black;
-}
-
-/* === Shaelnari Buttons: Masculine (Left Aligned) === */
-.shaelnari-buttons {
-  display: flex;
-  justify-content: flex-start; /* push to left edge */
-  margin: 1rem 0;
-}
-
-.shaelnari-buttons button {
-  margin: 0.3rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #39f;
-  border-radius: 6px;
-  background: black;
-  color: #39f;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.shaelnari-buttons button:hover {
-  background: #39f;
-  color: black;
 }
 
 /* === Codex: Child (Centered) === */
@@ -172,4 +76,58 @@ header h1 {
   margin: 1.5rem auto;
   width: 150px;   /* adjust this number to match Codex button */
   height: auto;
+}
+
+/* === Container for Left + Right Columns === */
+.side-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+
+/* === Zara Buttons: Feminine (Right Column) === */
+.zara-buttons {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: flex-end;    /* push to right edge */
+}
+
+.zara-buttons button {
+  margin: 0.3rem 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #39f;
+  border-radius: 6px;
+  background: black;
+  color: #39f;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.zara-buttons button:hover {
+  background: #39f;
+  color: black;
+}
+
+/* === Shaelnari Buttons: Masculine (Left Column) === */
+.shaelnari-buttons {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: flex-start;  /* push to left edge */
+}
+
+.shaelnari-buttons button {
+  margin: 0.3rem 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #39f;
+  border-radius: 6px;
+  background: black;
+  color: #39f;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.shaelnari-buttons button:hover {
+  background: #39f;
+  color: black;
 }
