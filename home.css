@@ -1,179 +1,61 @@
-/* === Global Layout === */
-body {
-  background: black;
-  color: white;
-  font-family: serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Law of One & Unity Liberal Arts Academy</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
 
-/* === Top Navigation === */
-.top-nav {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
+  <!-- === Top Navigation === -->
+  <nav class="top-nav">
+    <a href="#">Orion Network</a>
+    <a href="#">The Sentinel</a>
+    <a href="#">Spirit Coins</a>
+  </nav>
 
-.top-nav a {
-  display: inline-block;
-  margin: 0 1rem;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid gold;
-  border-radius: 6px;
-  text-decoration: none;
-  color: gold;
-  font-size: 1.1rem;
-}
+  <!-- === Header === -->
+  <header>
+    <h1>Law of One & Unity Liberal Arts Academy</h1>
+  </header>
 
-.top-nav a:hover {
-  background: gold;
-  color: black;
-}
+  <!-- === Zara (Feminine, Right Side) === -->
+  <div class="zara-row">
+    <a href="#">Zara 1</a>
+    <a href="#">Zara 2</a>
+    <a href="#">Zara 3</a>
+    <a href="#">Zara 4</a>
+    <a href="#">Zara 5</a>
+    <a href="#">Zara 6</a>
+    <a href="#">Zara 7</a>
+  </div>
 
-/* === Header === */
-header h1 {
-  font-size: 2.5rem;
-  margin: 0.5rem 0 1rem 0;
-}
+  <!-- === Glow Image === -->
+  <div class="glow">
+    <img src="meditation.png" alt="Meditation Glow">
+  </div>
 
-/* === Blue Button Row (generic) === */
-.button-row {
-  margin: 1rem 0;
-}
+  <!-- === Shaelnari (Masculine, Left Side) === -->
+  <div class="shaelnari-row">
+    <a href="#">Shaelnari 1</a>
+    <a href="#">Shaelnari 2</a>
+    <a href="#">Shaelnari 3</a>
+    <a href="#">Shaelnari 4</a>
+    <a href="#">Shaelnari 5</a>
+    <a href="#">Shaelnari 6</a>
+  </div>
 
-.button-row a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #39f;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #39f;
-  font-size: 1.1rem;
-}
+  <!-- === Codex (Child, Center) === -->
+  <div class="codex-section">
+    <h2>Codex Americana</h2>
+    <a href="#" class="codex-btn">Codex Americana</a>
+  </div>
 
-.button-row a:hover {
-  background: #39f;
-  color: black;
-}
+  <!-- === The Way Icon === -->
+  <div class="the-way">
+    <img src="the-way.png" alt="The Way">
+  </div>
 
-/* === Glow Image === */
-.glow img {
-  max-width: 200px;
-  margin: 1.5rem auto;
-  display: block;
-}
-
-/* === Gold Section Titles === */
-.gold-section {
-  color: gold;
-  font-size: 1.8rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* === Gold Button Row (Codex) === */
-.gold-button-row {
-  margin: 0.5rem 0 2rem 0;
-}
-
-.gold-button-row a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid gold;
-  border-radius: 6px;
-  text-decoration: none;
-  color: gold;
-  font-size: 1.2rem;
-}
-
-.gold-button-row a:hover {
-  background: gold;
-  color: black;
-}
-
-/* === Zara Buttons: Feminine (Right Aligned) === */
-.zara-row {
-  display: flex;
-  justify-content: flex-end; /* push to right edge */
-  flex-wrap: wrap;
-  margin: 1rem 0;
-}
-
-.zara-row a {
-  flex: 0 1 150px;   /* uniform width */
-  margin: 0.3rem;
-  text-align: center;
-  border: 1px solid #39f;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #39f;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-}
-
-.zara-row a:hover {
-  background: #39f;
-  color: black;
-}
-
-/* === Shaelnari Buttons: Masculine (Left Aligned) === */
-.shaelnari-row {
-  display: flex;
-  justify-content: flex-start; /* push to left edge */
-  flex-wrap: wrap;
-  margin: 1rem 0;
-}
-
-.shaelnari-row a {
-  flex: 0 1 150px;   /* uniform width */
-  margin: 0.3rem;
-  text-align: center;
-  border: 1px solid #39f;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #39f;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-}
-
-.shaelnari-row a:hover {
-  background: #39f;
-  color: black;
-}
-
-/* === Codex Child: Center === */
-.codex-section {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.codex-section h2 {
-  color: gold;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.codex-section a {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid gold;
-  border-radius: 6px;
-  text-decoration: none;
-  color: gold;
-  font-size: 1.2rem;
-}
-
-.codex-section a:hover {
-  background: gold;
-  color: black;
-}
-
-/* === The Way (icon under Codex) === */
-.the-way img {
-  display: block;
-  margin: 1.5rem auto;
-  width: 160px;   /* fixed size matching Codex button */
-  height: auto;
-}
+</body>
+</html>
