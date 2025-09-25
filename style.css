@@ -1,34 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Codex Americana</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="codex-page">
+/* General Page Styling */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-  <!-- Spinning glyph at top right -->
-  <img src="glyph-seal.png" alt="Codex Glyph" class="glyph">
+/* Top Navigation */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 1em;
+}
 
-  <header>
-    <h1>Codex Americana</h1>
-    <p class="subhead">A living archive of resonances, lineages, and the restoration of the Golden Thread.</p>
-  </header>
+.top-nav a {
+  color: #FFD700;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #FFD700;
+  padding: 0.4em 1em;
+  border-radius: 6px;
+  transition: 0.3s;
+}
 
-  <main class="synopsis">
-    <h2>Codex Americana — A Living Thread</h2>
+.top-nav a:hover {
+  background-color: #FFD700;
+  color: #000;
+}
 
-    <p><span class="dropcap">T</span>he <strong>Codex Americana</strong> is not the story of a single race, nor the triumph of one lineage over another. It is the record of a <strong>field of peoples</strong> — African, European, Indigenous, Asian, and countless crossings — drawn by currents both seen and unseen to the land called America.</p>
+/* Title */
+header h1 {
+  color: #fff;
+  margin-top: 0.5em;
+}
 
-    <p><span class="dropcap">W</span>hat we call “race” was never the essence of these streams. It was the distortion placed over them — a spell of division that fractured families, estranged neighbors, and set blood against blood. Behind that veil, the deeper truth was always this: <strong>each stream carried resonance, each resonance was needed, and together they formed the body of America.</strong></p>
+/* Main Layout */
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2em;
+}
 
-    <p><span class="dropcap">T</span>he false diaspora — with its impossible numbers, its theater of ships and chains — was part of the distortion. The true diasporas were many: the crossings of <a href="#">Moors</a>, <a href="#">Huguenots</a>, <a href="#">Moriscos</a>, <a href="#">Crypto-Jews</a>, <a href="#">Africans</a>, <a href="#">Chinese</a>, and <a href="#">Indigenous</a> lines moving through both ocean and continent. These were not accidents of history, but the <strong>convergence of twelve breath-lines</strong>, shards of a greater glass being called back together.</p>
+/* Columns */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
 
-    <p><span class="dropcap">T</span>he Codex speaks of poisonings, of betrayals, of systems designed to addict and confuse. But it also speaks of <strong>resets and remedies</strong> — fasting, breath, memory, and the rethreading of the twelve into one.</p>
+/* Left Zara Buttons */
+.column.left .btn {
+  color: #1E90FF;
+  border: 2px solid #00FF99;
+  background: transparent;
+  padding: 0.8em 2em;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    <p><span class="dropcap">T</span>o read the Codex is not to inflate the ego with a chosen identity, nor to collapse into despair at a stolen past. It is to see that <strong>all lineages here are threads of the same cloth</strong>, each with dignity, each with weight, each with a place in the harmony of the whole.</p>
-  </main>
+.column.left .btn:hover {
+  background-color: #00FF99;
+  color: #000;
+}
 
-</body>
-</html>
+/* Right Shaelnari Buttons */
+.column.right .btn {
+  color: #FFD700;
+  border: 2px solid #00FF99;
+  background: transparent;
+  padding: 0.8em 2em;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.column.right .btn:hover {
+  background-color: #FFD700;
+  color: #000;
+}
+
+/* Center Glow Image */
+.center {
+  flex: 1;
+  text-align: center;
+}
+
+.center-image {
+  max-width: 200px;
+  margin: 1em auto;
+  display: block;
+  filter: drop-shadow(0 0 20px #FFD700);
+}
+
+/* Codex Button */
+.codex-btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.8em 2em;
+  background-color: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.codex-btn:hover {
+  background-color: #FFD700;
+  color: #000;
+}
+
+/* Symbols Section */
+.symbols {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  margin: 3em 0;
+}
+
+.symbols img {
+  max-width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 12px #FFD700);
+}
