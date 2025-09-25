@@ -1,116 +1,140 @@
-/* General Page Styling */
-body {
-  background-color: #000;
-  color: #FFD700;
-  font-family: Georgia, serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+/* style.css - clean, centralized */
+:root{
+  --bg:#060606;
+  --gold:#f2c400;
+  --white:#ffffff;
+  --blue:#1e90ff;
+  --accent-green:#00e676;
+  --font: "Georgia", serif;
 }
 
-/* Top Navigation */
-.top-nav {
-  margin: 1em 0;
-}
-.top-nav a {
-  color: #FFD700;
-  text-decoration: none;
-  margin: 0 1em;
-  padding: 6px 12px;
-  border: 1px solid #FFD700;
-  border-radius: 8px;
-}
-.top-nav a:hover {
-  background: #FFD700;
-  color: #000;
+/* global */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font-family:var(--font);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-align:center;
 }
 
-/* Title */
-header h1 {
-  font-size: 2.2em;
-  color: white;
-  margin-bottom: 1em;
+/* top nav */
+.top-nav{
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  padding:14px 10px 6px;
+}
+.top-nav a{
+  color:var(--gold);
+  background:transparent;
+  border:2px solid rgba(242,196,0,0.95);
+  padding:8px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
 }
 
-/* Layout Grid */
-.main-layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 2em 5%;
+/* glyph top-right */
+.glyph{
+  position:fixed;
+  top:18px;
+  right:18px;
+  width:82px;
+  height:82px;
+  transform-origin:center;
+  opacity:0.95;
+  pointer-events:none; /* non-interactive so it doesn't block */
+  animation:spinSlow 24s linear infinite;
+  filter:drop-shadow(0 2px 8px rgba(242,196,0,0.25));
+}
+@keyframes spinSlow{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
 }
 
-/* Columns */
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 1.618em; /* phi spacing */
-}
-.left {
-  align-items: flex-start;
-}
-.right {
-  align-items: flex-end;
+/* header title */
+.header{padding:6px 20px 18px}
+.header h1{
+  margin:14px 0 22px;
+  font-size:3.1rem;
+  color:#fff;
+  text-shadow:0 2px 0 rgba(0,0,0,0.5);
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 10px 24px;
-  font-size: 1em;
-  border-radius: 12px;
-  text-decoration: none;
-  border: 2px solid #00FF99;
-  color: #00AEEF;
-  transition: 0.3s;
+/* button rows */
+.button-row{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin:16px auto;
+  max-width:1100px;
 }
-.btn:hover {
-  background: #00FF99;
-  color: black;
-}
-
-/* Center Section */
-.center {
-  max-width: 400px;
-  margin: 0 auto;
-}
-.center-image {
-  max-width: 200px;
-  margin-bottom: 1em;
-}
-.codex-btn {
-  display: inline-block;
-  margin-top: 0.5em;
-  padding: 10px 20px;
-  background: #FFD700;
-  color: black;
-  font-weight: bold;
-  border-radius: 10px;
-  text-decoration: none;
-}
-.codex-btn:hover {
-  background: white;
-  color: black;
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:10px;
+  border:2px solid rgba(30,144,255,0.75);
+  color:var(--blue);
+  background:transparent;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 2px 0 rgba(0,0,0,0.5), inset 0 -3px 0 rgba(0,0,0,0.12);
 }
 
-/* Symbols at Bottom */
-.symbols {
-  display: flex;
-  justify-content: center;
-  gap: 3.236em; /* phi spacing doubled */
-  margin: 3em 0;
+/* center glow */
+.center-glow{
+  margin:28px 0 10px;
 }
-.symbol {
-  max-width: 120px;
-  filter: drop-shadow(0 0 10px #FFD700);
-}
-.way-symbol {
-  margin-top: 20px;
+.center-glow img{
+  width:180px;
+  height:auto;
+  image-rendering:optimizeQuality;
+  filter:drop-shadow(0 10px 36px rgba(242,180,0,0.55));
 }
 
-.way-symbol img {
-  width: 120px;   /* adjust size as you like */
-  height: auto;
-  display: block;
-  margin: 0 auto;
+/* Codex CTA */
+.codex-cta{
+  margin:28px auto 26px;
+}
+.codex-cta h2{
+  color:var(--gold);
+  font-size:1.8rem;
+  margin:8px 0 14px;
+}
+.gold-button{
+  display:inline-block;
+  padding:12px 24px;
+  background:transparent;
+  color:var(--gold);
+  border:2px solid rgba(242,196,0,0.95);
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* the way symbol */
+.symbols-row{
+  margin:36px auto 70px;
+  display:flex;
+  justify-content:center;
+  gap:34px;
+}
+.the-way{
+  width:220px;
+  height:auto;
+  filter:drop-shadow(0 12px 28px rgba(242,180,0,0.35));
+}
+
+/* responsiveness */
+@media (max-width:900px){
+  .header h1{font-size:2rem}
+  .center-glow img{width:130px}
+  .the-way{width:160px}
+  .btn{padding:10px 14px}
+  .glyph{width:56px;height:56px}
 }
