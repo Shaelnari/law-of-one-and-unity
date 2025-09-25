@@ -125,8 +125,11 @@ body{
   gap:34px;
 }
 .the-way{
-  width:220px;
-  height:auto;
+  .the-way img {
+  width: 160px;  /* adjust to match codex button width */
+  height: auto;
+}
+
   filter:drop-shadow(0 12px 28px rgba(242,180,0,0.35));
 }
 
