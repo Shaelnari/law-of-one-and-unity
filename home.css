@@ -73,3 +73,11 @@ header h1 {
   background: gold;
   color: black;
 }
+
+/* === Fix: Scale the hand (the-way.png) === */
+.the-way img {
+  display: block;
+  margin: 1.5rem auto;
+  width: 160px;   /* adjust this number until it matches your Codex button */
+  height: auto;
+}
